@@ -6,13 +6,13 @@
 
      switch ($pilihan) {
          case "kilobyte" :
-            $hasil = round($nilai_kuota / 1024, 2);
+            $hasil = $nilai_kuota / 1024;
             break;
         case "megabyte" :
-            $hasil = round($nilai_kuota / 1024 / 1024, 2);
+            $hasil = $nilai_kuota / 1024;
             break;
         case "gigabyte" :
-            $hasil = round($nilai_kuota / 1024 / 1024 / 1024, 2);
+            $hasil = $nilai_kuota / 1024;
             break;
         default:
             $hasil = "NULL";
