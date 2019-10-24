@@ -14,14 +14,14 @@ if (isset($_POST['submit'])) {
     <title>Conversi kuota</title>
 </head>
 <body>
-    <form action="" method = "post">
+    <form action="" method="post">
         <label for="valKuota">Masukan Nilai Kuota</label>
-        <input type="text" name="valKuota" id="valKuota">
+        <input type="text" name="valKuota" id="valKuota" placeholder="Value dalam Byte" required>
 
         <div>
             <label for="kilobyte"><input type="radio" name="pilihan_kuota" id="kilobyte" value="kilobyte">Kilobyte</label>
             <label for="megabyte"><input type="radio" name="pilihan_kuota" id="megabyte" value="megabyte">Megabyte</label>
-            <label for="gigabyte"><input type="radio" name="radio" id="gigabyte" value="gigabyte">Gigabyte</label>
+            <label for="gigabyte"><input type="radio" name="pilihan_kuota" id="gigabyte" value="gigabyte">Gigabyte</label>
         </div>
         <br>
         <button type="submit" name="submit">Convert</button>
@@ -30,8 +30,8 @@ if (isset($_POST['submit'])) {
         if(isset($hasil)) :
     ?>
         <h3>
-            Hasil Konversi ke <?=$pilihan_kuota;?> adalah <?=$hasil;?>
+            Hasil Konversi ke <?= $pilihan_kuota ?> adalah <?= $hasil ?>
         </h3>
-        <?php endif;?>
+    <?php endif; ?>
 </body>
 </html>
